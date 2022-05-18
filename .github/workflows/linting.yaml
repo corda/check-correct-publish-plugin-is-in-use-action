@@ -14,11 +14,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Run ShellCheck
-        uses: ludeeus/action-shellcheck@master
-      - name: Run yamllint
-        uses: frenck/action-yamllint@v1
-      - name: markdownlint-cli
-        uses: nosborn/github-action-markdown-cli@v3
-        with:
-          files: README.md
+      - uses: actions/setup-python@v2
+      - uses: pre-commit/action@v2.0.3

@@ -1,6 +1,6 @@
 ---
 name: Check for wrong publishing plugin
-description: Makes sure the private Gradle publishing plugin is not used
+description: Make sure the private Gradle publishing plugin is not used
 runs:
   using: composite
   steps:

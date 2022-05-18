@@ -1,0 +1,41 @@
+# See https://pre-commit.com for more information.
+# See https://pre-commit.com/hooks.html for more hooks.
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks.git
+    rev: v4.1.0
+    hooks:
+      - id: check-added-large-files
+        exclude: ^ansible/files/jira-.+\.zip
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-vcs-permalinks
+      - id: end-of-file-fixer
+        exclude: ^ansible/files/.+/network-parameters-.+\.conf$
+      - id: fix-byte-order-marker
+      - id: forbid-new-submodules
+      - id: mixed-line-ending
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli.git
+    rev: v0.31.1
+    hooks:
+      - id: markdownlint
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+        args:
+          - -c
+          - .yamllint
+          - -s
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks.git
+    rev: 2.1.6
+    hooks:
+      - id: shellcheck
+minimum_pre_commit_version: !!str 2.17
