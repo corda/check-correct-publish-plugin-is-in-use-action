@@ -30,7 +30,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: wzur-r3/check-correct-publish-plugin-is-in-use-action@v1
+    - uses: corda/check-correct-publish-plugin-is-in-use-action@v1
 ```
 
 ## Versioning
