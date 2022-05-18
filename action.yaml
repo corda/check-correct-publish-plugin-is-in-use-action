@@ -1,0 +1,9 @@
+name: Check for wrong publishing plugin
+description: Makes sure the private Gradle publishing plugin is not used
+runs:
+  using: composite
+  steps:
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+      shell: bash          
+    - run: run-check.sh
+      shell: bash
