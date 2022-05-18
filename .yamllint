@@ -1,0 +1,40 @@
+# Configuration for GitHub workflow.
+---
+extends: default
+
+rules:
+  braces:
+    # forbid: non-empty -- TODO
+    max-spaces-inside-empty: 0
+    min-spaces-inside-empty: 0
+  brackets:
+    # forbid: non-empty -- TODO
+    max-spaces-inside-empty: 0
+    min-spaces-inside-empty: 0
+  comments:
+    min-spaces-from-content: 1 # because VSCode
+  document-end:
+    present: false
+  empty-lines:
+    max: 1
+  # empty-values: -- TODO
+  #   forbid-in-block-mappings: true
+  #   forbid-in-flow-mappings: true
+  indentation:
+    # check-multi-line-strings: true
+    indent-sequences: true
+    spaces: 2
+  key-ordering:
+    ignore: |
+      .github/workflows/
+      .pre-commit-config.yaml
+      action.yaml
+  line-length:
+    allow-non-breakable-inline-mappings: true
+  new-lines:
+    type: unix
+  quoted-strings:
+    quote-type: double
+    required: only-when-needed
+
+# vim: ft=yaml
