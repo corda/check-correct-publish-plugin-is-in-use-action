@@ -5,7 +5,7 @@ set -eu
 
 echo "Search: $(grep -ril com.r3.internal.gradle.plugins.r3Publish)"
 
-if [ $(grep -ril com.r3.internal.gradle.plugins.r3Publish | wc -l) -gt 1 ]
+if [ "$(grep -ril com.r3.internal.gradle.plugins.r3Publish | wc -l)" -gt 1 ]
 then
     echo "com.r3.internal.gradle.plugins.r3Publish has been used by mistake!"
     echo "Please replace it with corda.common-publishing"
