@@ -18,3 +18,5 @@ jobs:
         uses: ludeeus/action-shellcheck@master
       - name: Run yamllint
         uses: frenck/action-yamllint@v1
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v3      
